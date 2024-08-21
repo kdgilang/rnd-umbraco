@@ -1,0 +1,22 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.Accordion)Model.Content;
+    var settings = (ContentModels.Accordion)Model.Settings;
+    var accordionItems = content.Value<IEnumerable<Umbraco.Cms.Core.Models.Blocks.BlockListItem>>("accordionItems");
+}
+
+<div id="accordion">
+    @foreach (var item in accordionItems)
+    {
+        var title = item.Content.Value<string>("title");
+        var body = item.Content.Value<string>("body");
+
+        <div class="accordion-item">
+            <button class="accordion-button">@title</button>
+            <div class="accordion-content">
+                @Html.Raw(@body)
+            </div>
+        </div>
+    }
+</div>

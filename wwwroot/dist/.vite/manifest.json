@@ -1,0 +1,26 @@
+{
+  "app.css": {
+    "file": "app-UKOY1Zo_.css",
+    "isEntry": true,
+    "src": "app.css"
+  },
+  "index.html": {
+    "file": "home-bnL5zv9o.js",
+    "imports": [
+      "priority.js",
+      "main.js"
+    ],
+    "isEntry": true,
+    "src": "index.html"
+  },
+  "main.js": {
+    "file": "main-w40geAFS.js",
+    "isEntry": true,
+    "src": "main.js"
+  },
+  "priority.js": {
+    "file": "priority-w40geAFS.js",
+    "isEntry": true,
+    "src": "priority.js"
+  }
+}

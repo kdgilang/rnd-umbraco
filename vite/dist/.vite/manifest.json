@@ -1,0 +1,29 @@
+{
+  "_modulepreload-polyfill-9p4a8sJU.js": {
+    "file": "modulepreload-polyfill-9p4a8sJU.js"
+  },
+  "main.js": {
+    "css": [
+      "main-JealyPYE.css"
+    ],
+    "file": "main-jsiLaUKW.js",
+    "isEntry": true,
+    "src": "main.js"
+  },
+  "pages/assets/dummy-image.png": {
+    "file": "dummy-image-TkBDaCE4.png",
+    "src": "pages/assets/dummy-image.png"
+  },
+  "pages/assets/logo.png": {
+    "file": "logo-Z-KJRgjX.png",
+    "src": "pages/assets/logo.png"
+  },
+  "priority.js": {
+    "css": [
+      "priority-6i5w73wQ.css"
+    ],
+    "file": "priority-P_977WNM.js",
+    "isEntry": true,
+    "src": "priority.js"
+  }
+}

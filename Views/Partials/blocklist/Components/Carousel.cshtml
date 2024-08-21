@@ -1,0 +1,28 @@
+﻿@inherits Umbraco.Cms.Web.Common.Views.UmbracoViewPage<Umbraco.Cms.Core.Models.Blocks.BlockListItem>;
+@using ContentModels = Umbraco.Cms.Web.Common.PublishedModels;
+@{
+    var content = (ContentModels.Carousel)Model.Content;
+    var settings = (ContentModels.Carousel)Model.Settings;
+    var carouselItems = content.Value<IEnumerable<Umbraco.Cms.Core.Models.Blocks.BlockListItem>>("carouselItems");
+}
+
+<div id="carousel">
+    @foreach (var item in carouselItems)
+    {
+        var title = item.Content.Value<string>("title");
+        var description = item.Content.Value<string>("description");
+        @* var image = item.Content.Value<MediaWithCrops>("image"); *@
+        var photo = item.Content.Value<IPublishedContent>("image");
+        var imageHeight = photo.Value<int>("umbracoHeight"); 
+        var imageWidth = photo.Value<int>("umbracoWidth");
+
+        <div class="carousel-item">
+            
+            <img src="@photo.Url()" loading="lazy" alt="@title" width="@imageWidth" height="@imageHeight">
+            <h2 class="carousel-button">@title</h2>
+            <div class="carousel-content">
+                <p>@description</p>
+            </div>
+        </div>
+    }
+</div>
